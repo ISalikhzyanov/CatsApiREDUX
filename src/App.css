@@ -1,0 +1,29 @@
+.navbar{
+    height: 64px;
+    background: #2196F3;
+    display: flex;
+    align-items: center;
+}
+.navbar-links{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 62px;
+}
+
+.link {
+    text-decoration: none;
+    height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 0 10px 20px;
+    cursor: pointer;
+}
+
+.loader{
+    margin-top: 20% ;
+    margin-left: 47%;
+
+}

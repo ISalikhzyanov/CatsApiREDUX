@@ -1,5 +1,4 @@
 import {ADD_FAVOURITE, REMOVE_FAVOURITE} from "./types";
-import {omit, pull} from "lodash";
 
 const initialState = {
     favourites: []

@@ -2,6 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import heart from '../UI/heart.svg';
 import clickedHeart from '../UI/clickedHeart.svg'
+import hoveredHeart from '../UI/hoveredHeart.svg'
 import '../componenets/styles/CatCardStyle.css'
 import {addToFavourite, removeFromFavourite} from "../redux/actions";
 

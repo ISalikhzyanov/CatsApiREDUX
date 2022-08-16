@@ -1,22 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import heart from '../UI/heart.svg';
 import clickedHeart from '../UI/clickedHeart.svg'
 import '../componenets/styles/CatCardStyle.css'
-import {addToFavourite, getLike, removeFromFavourite, removeLike} from "../redux/actions";
+import {addToFavourite, removeFromFavourite} from "../redux/actions";
 
 const CatCard = ({cat}) => {
-    // const favourite = useSelector(state => state.favourites.favourites)
-    const liked = useSelector(state => state.app.liked)
-    const [like, setLike] = useState(liked)
+    const favourite = useSelector(state => state.favourites.favourites)
+    if(favourite.includes(cat)){
+        cat.like = true
+    }
     const dispatchFavouriteCat = () => {
 
-        if (like) {
-            dispatch(removeFromFavourite(cat));
-            setLike(false);
+        if (cat.like) {
+            dispatch(removeFromFavourite(cat))
+            cat.like = false
+
         } else {
             dispatch(addToFavourite(cat));
-            setLike(dispatch(getLike(cat)));
+            cat.like = true
+
         }
     }
 
@@ -27,7 +30,7 @@ const CatCard = ({cat}) => {
             <img className="cat-img" src={cat.url} alt='cat-img'/>
             <img className='heart'
                  onClick={dispatchFavouriteCat}
-                 src={like ? clickedHeart : heart}
+                 src={cat.like ? clickedHeart : heart}
                  alt='heart-img'/>
 
         </div>

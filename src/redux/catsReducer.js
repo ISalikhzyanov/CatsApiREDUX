@@ -1,5 +1,4 @@
-import {ADD_FAVOURITE, FETCH_CATS, REMOVE_FAVOURITE} from "./types";
-import {omit} from 'lodash';
+import {FETCH_CATS} from "./types";
 
 
 const initialState = {
@@ -13,4 +12,6 @@ export const catsReducer = (state = initialState, action) => {
         default:
             return state
     }
+
+
 }

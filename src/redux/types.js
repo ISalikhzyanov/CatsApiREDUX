@@ -4,3 +4,4 @@ export const FETCH_CATS = 'CATS/FETCH_CATS';
 export const SHOW_LOADER = 'APP/SHOW_LOADER';
 export const HIDE_LOADER = 'APP/HIDE_LOADER';
 
+

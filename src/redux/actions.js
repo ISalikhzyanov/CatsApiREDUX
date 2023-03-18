@@ -19,6 +19,7 @@ export function fetchCats() {
         dispatch(showLoader())
         const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=10');
         const json = await response.json()
+        json.map((el) => { el.liked = false; return el })
         setTimeout(() => {
             dispatch({type: FETCH_CATS, payload: json})
             dispatch(hideLoader())

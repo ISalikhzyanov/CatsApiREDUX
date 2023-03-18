@@ -7,11 +7,12 @@ const FavouriteCats = () => {
     if (!favourites.length){
         return <p className="text-center">Избранных котов пока нет!</p>
     }
-    return favourites.map(cat =>
-        <CatCard
+    return <div className="list">
+        {favourites.map(cat => <CatCard
             cat={cat}
-            key={cat.id}
-        />)
+            key={cat.id}/>
+        )}
+    </div>
 };
 
 export default FavouriteCats;
